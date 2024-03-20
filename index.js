@@ -3,6 +3,7 @@ const app = express();
 const exphbs = require("express-handlebars");
 const PORT = 3000;
 
+// Configurción de motor de plantillas
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.engine(
@@ -15,18 +16,30 @@ app.engine(
   })
 );
 
+// Static
 app.use(express.static("assets"));
+app.use('/jquery', express.static('node_modules/jquery/dist'));
+app.use('/bootstrap-js', express.static('node_modules/bootstrap/dist/js'));
 app.use(
   "/bootstrap",
   express.static(__dirname + "/node_modules/bootstrap/dist/css")
 );
 
+// Rutas
 app.get("/", (req, res) => {
-  res.render("home", {
-    producto: ["banana", "cebollas", "pimenton", "papas", "lechuga", "tomate"],
-  });
+  const producto = [
+    { name: 'banana', unit: 1, price: 590 },
+    { name: 'cebollas', unit: 1, price: 690 },
+    { name: 'pimenton', unit: 1, price: 990 },
+    { name: 'papas', unit: 1, price: 590 },
+    { name: 'lechuga', unit: 1, price: 1290 },
+    { name: 'tomate', unit: 1, price: 790 }
+  ];
+
+  res.render("home", {producto});
 });
 
+// Correr el servidor
 app.listen(PORT, () =>
   console.log(`Server running on port http://localhost:${PORT}`)
 );
