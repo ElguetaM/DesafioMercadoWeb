@@ -1,0 +1,13 @@
+{{#each producto}}
+  <div class="col-4 col-md-4 my-3">
+    <div class="card-body">
+      <h5 class="card-title">{{this}}</h5>
+      <img
+        src="img/{{this}}.png"
+        alt="{{this}}"
+        class="card-img-bottom"
+        style="max-width: 150px;"
+      />
+    </div>
+  </div>
+{{/each}}
