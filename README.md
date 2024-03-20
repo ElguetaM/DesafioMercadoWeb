@@ -1,8 +1,8 @@
 # Desafío Mercado Web
 
-<img src="./assets/screenshots/desktop.jpeg" width="50%" >
+<img src="./assets/screenshots/desktop.jpeg" width="80%" >
 
-<img src="./assets/screenshots/mobile.jpg" width="15%" >
+<img src="./assets/screenshots/mobile.jpg" width="40%" >
 
 ## Descripción
 Desarrollo de una aplicación web para el Mini Market "Come Sano, Come Fresco Spa", que permite la venta de alimentos online. Se utiliza Express.js en el lado del servidor para manejar las solicitudes HTTP y renderizar vistas dinámicas utilizando Handlebars. Para el front-end, se emplean HTML, CSS, JavaScript, Bootstrap y jQuery para proporcionar una experiencia de usuario interactiva y atractiva.
